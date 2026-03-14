@@ -2,45 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Vault Cart | TGSOBA</title>
+    <title>Finalize Acquisition | TGSOBA Bureau</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
-        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; }
-        .cart-wrapper { max-width: 1000px; margin: 80px auto; padding: 20px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 25px; border-bottom: 1px solid #222; background: var(--slate); margin-bottom: 10px; }
-        .item-info h3 { font-family: 'Cinzel'; color: var(--gold); margin: 0; font-size: 1.1rem; }
-        .item-info p { color: #666; font-size: 0.8rem; margin: 5px 0; }
-        .price { font-family: 'Cinzel'; color: var(--gold); font-weight: bold; }
-        .cart-summary { margin-top: 40px; padding: 30px; border: 1px solid var(--gold); text-align: right; }
-        .total-row { font-size: 1.4rem; font-family: 'Cinzel'; margin-bottom: 20px; }
-        .btn-checkout { background: var(--gold); color: black; border: none; padding: 15px 40px; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; --border: #2a2a2a; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 5%; }
+        
+        .checkout-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+        h1, h2 { font-family: 'Cinzel'; color: var(--gold); }
+
+        /* Left Side: Forms */
+        .form-section { background: var(--slate); border: 1px solid var(--border); padding: 30px; margin-bottom: 20px; }
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-size: 0.7rem; color: #666; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+        input { width: 100%; background: #000; border: 1px solid var(--border); padding: 12px; color: white; box-sizing: border-box; }
+        input:focus { border-color: var(--gold); outline: none; }
+
+        /* Right Side: Summary */
+        .summary-box { background: #000; border: 1px solid var(--gold); padding: 30px; position: sticky; top: 40px; }
+        .summary-item { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 0.9rem; }
+        .total-row { border-top: 1px solid var(--border); margin-top: 20px; padding-top: 20px; font-weight: bold; font-size: 1.2rem; color: var(--gold); }
+
+        .btn-confirm { background: var(--gold); color: black; border: none; padding: 18px; width: 100%; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 1rem; }
+        .security-badge { text-align: center; margin-top: 20px; font-size: 0.7rem; color: #555; }
     </style>
 </head>
 <body>
-    <div class="cart-wrapper">
-        <h1 style="font-family:'Cinzel'; color:var(--gold);">Foundry Cart</h1>
-        
-        <div class="cart-item">
-            <div class="item-info">
-                <h3>Physical Pillar ID Card</h3>
-                <p>NFC-Enabled PVC • Tier 2 Status</p>
+
+    <header style="margin-bottom: 40px;">
+        <a href="marketplace.html" style="color:var(--gold); text-decoration:none; font-family:'Cinzel';">← Back to Marketplace</a>
+        <h1>Secure Checkout</h1>
+    </header>
+
+    <div class="checkout-container">
+        <div class="checkout-main">
+            <div class="form-section">
+                <h2>1. Shipping Destination</h2>
+                <div class="input-group">
+                    <label>Full Legal Name</label>
+                    <input type="text" placeholder="As it appears on your Sovereign Registry">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="input-group"><label>Street Address</label><input type="text"></div>
+                    <div class="input-group"><label>Apt / Suite</label><input type="text"></div>
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px;">
+                    <div class="input-group"><label>City</label><input type="text"></div>
+                    <div class="input-group"><label>State</label><input type="text"></div>
+                    <div class="input-group"><label>Zip</label><input type="text"></div>
+                </div>
             </div>
-            <div class="price">$45.00</div>
+
+            <div class="form-section">
+                <h2>2. Identity Verification Pin</h2>
+                <p style="font-size: 0.8rem; color: #666;">Enter your 6-digit Registry PIN to authorize this acquisition.</p>
+                <input type="password" maxlength="6" style="letter-spacing: 10px; text-align: center; font-size: 1.5rem;">
+            </div>
         </div>
 
-        <div class="cart-item">
-            <div class="item-info">
-                <h3>Architect Subscription</h3>
-                <p>Monthly Foundry Access • Node Entry</p>
-            </div>
-            <div class="price">$49.99/mo</div>
-        </div>
+        <aside class="checkout-sidebar">
+            <div class="summary-box">
+                <h2>Vault Summary</h2>
+                <div class="summary-item">
+                    <span>Physical Pillar ID Card</span>
+                    <span>$45.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Employer Re-Entry Cert</span>
+                    <span>$99.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping (Node Priority)</span>
+                    <span>$12.00</span>
+                </div>
+                
+                <div class="total-row">
+                    <span>Total Investment</span>
+                    <span>$156.00</span>
+                </div>
 
-        <div class="cart-summary">
-            <div class="total-row">Total: $94.99</div>
-            <a href="checkout.html" class="btn-checkout">Proceed to Vault Checkout →</a>
-        </div>
+                <button class="btn-confirm">AUTHORIZE & PURCHASE</button>
+                
+                <div class="security-badge">
+                    🔒 256-BIT ENCRYPTED SOVEREIGN TRANSACTION
+                </div>
+            </div>
+        </aside>
     </div>
+
 </body>
 </html>
