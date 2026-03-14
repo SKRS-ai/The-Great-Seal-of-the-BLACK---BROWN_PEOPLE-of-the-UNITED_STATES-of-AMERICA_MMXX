@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The National Charter | TGSOBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;700&family=Spectral:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --paper: #f4f1ea; --ink: #1a1a1a; }
+        body { background: #050505; display: flex; justify-content: center; padding: 80px 20px; margin: 0; }
+        
+        .scroll { 
+            background: var(--paper); 
+            max-width: 850px; 
+            padding: 100px 80px; 
+            box-shadow: 0 0 50px rgba(0,0,0,0.5), inset 0 0 100px rgba(0,0,0,0.1);
+            color: var(--ink);
+            position: relative;
+            border: 1px solid #d4d0c5;
+        }
+
+        .scroll::before, .scroll::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: #d4d0c5;
+        }
+        .scroll::before { top: -20px; border-radius: 10px 10px 0 0; }
+        .scroll::after { bottom: -20px; border-radius: 0 0 10px 10px; }
+
+        .charter-header { text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 40px; margin-bottom: 60px; }
+        .charter-header h1 { font-family: 'Cinzel Decorative', serif; font-size: 2.2rem; margin: 0; }
+        .seal-watermark { width: 150px; margin: 20px auto; opacity: 0.8; }
+
+        .article { margin-bottom: 40px; font-family: 'Spectral', serif; line-height: 1.8; font-size: 1.1rem; text-align: justify; }
+        .article h3 { font-family: 'Cinzel', serif; color: var(--gold); border-bottom: 1px solid #ddd; display: inline-block; margin-bottom: 15px; }
+        
+        .signatures { margin-top: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-family: 'Cinzel', serif; }
+        .sig-line { border-top: 1px solid #000; margin-top: 40px; padding-top: 10px; font-size: 0.8rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <article class="scroll">
+        <div class="charter-header">
+            <img src="Tgsobabpousa1.png" alt="The Great Seal" class="seal-watermark">
+            <h1>The National Charter</h1>
+            <p style="font-family: 'Cinzel'; font-size: 0.7rem; letter-spacing: 3px; color: var(--gold);">OF THE BLACK AND BROWN PEOPLE OF THE UNITED STATES</p>
+        </div>
+
+        <section class="article">
+            <h3>Article I: Sovereign Identity</h3>
+            <p>We recognize the inherent individuality of every Pillar within this Registry. No state or external entity shall diminish the documented heritage or the "Goodness Standing" established through the Bureau of National Identity.</p>
+        </section>
+
+        <section class="article">
+            <h3>Article II: The Family of Corporations</h3>
+            <p>Economic power shall be centralized through the Solomon Kin Records and the Economic Foundry. Members agree to prioritize Village-Logic commerce, ensuring that capital remains within the Nodes of the National Network.</p>
+        </section>
+
+        <section class="article">
+            <h3>Article III: Restorative Justice</h3>
+            <p>The "Mind Damage" curriculum is the mandatory path for restoration. We reject the permanent labeling of justice-involved individuals, replacing such labels with the documented "Goodness Code" and Tier-based advancement.</p>
+        </section>
+
+        <section class="article">
+            <h3>Article IV: Generational Continuity</h3>
+            <p>All assets, including Digital Identity Coins and Physical Trusts, shall be protected for the lineage of the Sovereigns, ensuring that wealth and wisdom are never again stripped from the family tree.</p>
+        </section>
+
+        <div class="signatures">
+            <div>
+                <div class="sig-line">FOR SOLOMON KIN RECORDS</div>
+            </div>
+            <div>
+                <div class="sig-line">FOR THE BUREAU / TBBLUSA</div>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 0.6rem; margin-top: 60px; color: #999;">RATIFIED IN THE PHILADELPHIA ALPHA NODE, 2026</p>
+    </article>
+
+</body>
+</html>
