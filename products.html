@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign Products | TBBLUSA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        .header { padding: 40px 5%; text-align: center; border-bottom: 1px solid var(--gold); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 50px 5%; }
+        .p-card { background: #111; border: 1px solid #222; padding: 25px; transition: 0.3s; }
+        .p-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .p-price { font-family: 'Cinzel'; color: var(--gold); font-size: 1.5rem; margin: 15px 0; }
+        .buy-btn { display: block; width: 100%; padding: 10px; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-align: center; text-decoration: none; font-size: 0.8rem; }
+        .category-tag { font-size: 0.6rem; color: #666; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1 style="font-family:'Cinzel'">Bureau Certification Products</h1>
+    <p>Documenting value. Building the Village.</p>
+</header>
+
+<div class="product-grid">
+    <div class="p-card">
+        <span class="category-tag">Identity Enhancement</span>
+        <h3>Physical Pillar ID Card</h3>
+        <p style="font-size:0.8rem">NFC-enabled physical card for Node entry.</p>
+        <div class="p-price">$45.00</div>
+        <a href="#" class="buy-btn">Add to Vault</a>
+    </div>
+
+    <div class="p-card">
+        <span class="category-tag">Restorative Justice</span>
+        <h3>Employer Re-Entry Cert</h3>
+        <p style="font-size:0.8rem">Verification of Goodness Code for hiring.</p>
+        <div class="p-price">$99.00</div>
+        <a href="#" class="buy-btn">Order Verification</a>
+    </div>
+
+    <div class="p-card">
+        <span class="category-tag">Business Enterprise</span>
+        <h3>Great Seal Storefront Vinyl</h3>
+        <p style="font-size:0.8rem">Physical window decal for Safe Haven shops.</p>
+        <div class="p-price">$75.00</div>
+        <a href="#" class="buy-btn">Apply for Seal</a>
+    </div>
+
+    <div class="p-card" style="border: 1px solid var(--gold)">
+        <span class="category-tag">Membership Tier</span>
+        <h3>Architect Subscription</h3>
+        <p style="font-size:0.8rem">Monthly access to Foundry training & contracts.</p>
+        <div class="p-price">$49.99/mo</div>
+        <a href="#" class="buy-btn" style="background:var(--gold); color:black">Subscribe Now</a>
+    </div>
+
+    </div>
+
+</body>
+</html>
