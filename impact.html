@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Impact | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #1a1a1a; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        
+        .impact-hero { padding: 80px 5%; text-align: center; border-bottom: 2px solid var(--gold); background: linear-gradient(to bottom, #111, #000); }
+        .impact-hero h1 { font-family: 'Cinzel'; font-size: 2.8rem; margin: 0; }
+        
+        .stats-ticker { display: flex; overflow: hidden; background: var(--gold); color: black; padding: 10px 0; font-family: 'Cinzel'; font-weight: bold; font-size: 0.8rem; letter-spacing: 2px; }
+        .ticker-wrap { display: flex; animation: scroll 30s linear infinite; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 5%; }
+        
+        .impact-card { background: var(--slate); border: 1px solid #333; padding: 40px; text-align: center; transition: 0.3s; }
+        .impact-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .impact-val { font-size: 3rem; font-family: 'Cinzel'; color: var(--gold); margin: 10px 0; }
+        .impact-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+
+        .chart-mockup { width: 100%; height: 200px; background: #000; border: 1px solid #222; margin-top: 20px; position: relative; display: flex; align-items: flex-end; justify-content: space-around; padding: 10px; }
+        .bar { width: 15%; background: var(--gold); opacity: 0.6; transition: 0.5s; }
+        .bar:hover { opacity: 1; }
+
+        .donors-section { background: #000; padding: 60px 5%; text-align: center; border-top: 1px solid #222; }
+        .btn-donate { display: inline-block; padding: 15px 40px; background: var(--gold); color: black; font-family: 'Cinzel'; font-weight: bold; text-decoration: none; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <div class="stats-ticker">
+        <div class="ticker-wrap">
+            <span>&nbsp; // LIVES RESTORED: 12,482 // TOTAL FOUNDRY REVENUE: $14.2M // PILLAR HOUSES ACTIVE: 02 // GOODNESS CREDITS ISSUED: 840,000 // &nbsp;</span>
+            <span>&nbsp; // LIVES RESTORED: 12,482 // TOTAL FOUNDRY REVENUE: $14.2M // PILLAR HOUSES ACTIVE: 02 // GOODNESS CREDITS ISSUED: 840,000 // &nbsp;</span>
+        </div>
+    </div>
+
+    <header class="impact-hero">
+        <h1>Documenting the Restoration</h1>
+        <p style="color:var(--gold); font-family:'Cinzel';">The Real-Time Social ROI of the Sovereign-Village-OS</p>
+    </header>
+
+    <main class="dashboard-grid">
+        <div class="impact-card">
+            <div class="impact-label">Economic Empowerment</div>
+            <div class="impact-val">$4.2M+</div>
+            <p style="font-size:0.8rem; color:#666;">Wages paid to verified Pillars through the Economic Foundry in 2025-2026.</p>
+            <div class="chart-mockup">
+                <div class="bar" style="height: 30%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+                <div class="bar" style="height: 70%;"></div>
+                <div class="bar" style="height: 95%;"></div>
+            </div>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-label">Recidivism Reduction</div>
+            <div class="impact-val">84%</div>
+            <p style="font-size:0.8rem; color:#666;">Lower re-arrest rate for members who complete Mind Damage Module 1-4.</p>
+            <div style="margin-top:20px; font-family:'Cinzel'; font-size:0.7rem; color:var(--gold);">NATIONAL AVG: 45% | TGSOBA: 84%</div>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-label">Identity Clarity</div>
+            <div class="impact-val">100%</div>
+            <p style="font-size:0.8rem; color:#666;">Verified ancestral data for all registered Sovereigns, ensuring historical continuity.</p>
+            <div style="border-top: 1px solid #333; margin-top: 20px; padding-top: 20px; font-size: 0.7rem; color: #444;">
+                "FROM STATISTICS BACK TO INDIVIDUALS"
+            </div>
+        </div>
+    </main>
+
+    <section class="donors-section">
+        <h2 style="font-family:'Cinzel';">Invest in the Village</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: #888;">The Bureau is seeking $10M in social impact bonds to scale the Pillar House model to 10 additional cities by 2027.</p>
+        <a href="donate.html" class="btn-donate">Download Prospectus & Donate</a>
+    </section>
+
+</body>
+</html>
