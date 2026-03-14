@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Foundry Marketplace | TGSOBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; padding-bottom: 120px; }
+        
+        /* Header & Nav */
+        header { padding: 40px 5%; border-bottom: 1px solid var(--gold); background: #000; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cinzel'; color: var(--gold); font-size: 1.5rem; text-decoration: none; }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 5%; }
+        .card { background: var(--slate); border: 1px solid #222; padding: 25px; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); background: #161616; }
+        
+        .card h3 { font-family: 'Cinzel'; margin: 10px 0; color: var(--gold); }
+        .card p { font-size: 0.8rem; color: #888; flex-grow: 1; line-height: 1.5; }
+        .price { font-family: 'Cinzel'; font-size: 1.2rem; margin: 20px 0; }
+
+        /* Action Buttons */
+        .btn-add { background: var(--gold); color: black; border: none; padding: 12px; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; width: 100%; }
+        .btn-info { background: transparent; color: #666; border: none; font-size: 0.7rem; cursor: pointer; margin-top: 10px; text-decoration: underline; }
+
+        /* The Floating Cart */
+        .cart-footer { position: fixed; bottom: 0; width: 100%; background: #000; border-top: 2px solid var(--gold); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
+        .total-box { font-family: 'Cinzel'; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">FOUNDRY MARKET</a>
+    <div style="font-family:'Cinzel'; font-size: 0.7rem;">STATUS: SECURE TRANS-ACT</div>
+</header>
+
+<div class="product-grid">
+    <div class="card">
+        <span style="font-size:0.6rem; color:var(--gold);">IDENTITY HARDWARE</span>
+        <h3>Physical Pillar ID Card</h3>
+        <p>NFC-enabled matte black PVC card. Required for physical Node entry and biometric verification.</p>
+        <div class="price">$45.00</div>
+        <button class="btn-add">Add to Vault</button>
+        <button class="btn-info" onclick="alert('FULL SPECS: NTAG215 Chip, UV-Printed, Encrypted Identity Sync.')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <span style="font-size:0.6rem; color:var(--gold);">RESTORATIVE JUSTICE</span>
+        <h3>Employer Re-Entry Cert</h3>
+        <p>A certified verification of your Goodness Code standing to present to Bureau-partnered employers.</p>
+        <div class="price">$99.00</div>
+        <button class="btn-add">Order Verification</button>
+        <button class="btn-info" onclick="alert('INCLUDES: Background Clarity Report, Goodness Standing Seal.')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <span style="font-size:0.6rem; color:var(--gold);">ENTERPRISE</span>
+        <h3>Great Seal Vinyl</h3>
+        <p>6-inch Metallic Gold window decal for registered businesses. Marks your shop as a Safe Haven.</p>
+        <div class="price">$75.00</div>
+        <button class="btn-add">Apply for Seal</button>
+    </div>
+
+    <div class="card" style="border-color: var(--gold);">
+        <span style="font-size:0.6rem; color:var(--gold);">MEMBERSHIP</span>
+        <h3>Architect Subscription</h3>
+        <p>Premium monthly access to the Foundry job board, private contracts, and Tier 3 status.</p>
+        <div class="price">$49.99/mo</div>
+        <button class="btn-add">Subscribe Now</button>
+    </div>
+</div>
+
+<div class="cart-footer">
+    <div class="total-box">Vault Total: <span style="color:var(--gold);">$0.00</span></div>
+    <a href="cart.html" style="background:white; color:black; padding:10px 25px; text-decoration:none; font-family:'Cinzel'; font-weight:bold; font-size:0.8rem;">Checkout →</a>
+</div>
+
+</body>
+</html>
