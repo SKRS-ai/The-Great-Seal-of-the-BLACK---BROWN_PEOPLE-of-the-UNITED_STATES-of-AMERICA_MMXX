@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Civic Registry | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 50px 5%; }
+        .civic-card { background: var(--slate); border: 1px solid var(--gold); padding: 40px; max-width: 800px; margin: 0 auto; }
+        .status-meter { width: 100%; height: 10px; background: #222; margin: 20px 0; border-radius: 5px; overflow: hidden; }
+        .fill { height: 100%; background: var(--gold); width: 68%; } /* Mock data */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .data-box { border: 1px solid #333; padding: 20px; text-align: center; }
+        .btn-gold { width: 100%; padding: 15px; background: var(--gold); color: black; font-family: 'Cinzel'; font-weight: bold; border: none; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="civic-card">
+        <h1 style="font-family:'Cinzel'; text-align: center;">National Civic Standing</h1>
+        <p style="text-align: center; color: #888;">Leveraging the Collective Voice of the Pillars.</p>
+        
+        <div class="status-meter"><div class="fill"></div></div>
+        <p style="font-size: 0.8rem; text-align: center;">Node Registration Progress: <strong>68% Verified Voters</strong></p>
+
+        <div class="grid">
+            <div class="data-box">
+                <span style="font-size: 0.7rem; color: var(--gold);">ACTIVE REGISTRANTS</span>
+                <div style="font-size: 2rem; font-family: 'Cinzel';">8,491</div>
+            </div>
+            <div class="data-box">
+                <span style="font-size: 0.7rem; color: var(--gold);">CIVIC GOODNESS SCORE</span>
+                <div style="font-size: 2rem; font-family: 'Cinzel';">A+</div>
+            </div>
+        </div>
+
+        <form style="margin-top: 40px;">
+            <h3 style="font-family:'Cinzel'; color: var(--gold);">Update Your Voter Status</h3>
+            <label style="display:block; font-size: 0.7rem; margin-bottom: 5px;">VOTER ID / REGISTRATION DISTRICT</label>
+            <input type="text" placeholder="Enter District or State ID" style="width:100%; padding:12px; background:black; border:1px solid #333; color:white;">
+            <button type="button" class="btn-gold">Sync with Sovereign Profile</button>
+        </form>
+    </div>
+
+</body>
+</html>
