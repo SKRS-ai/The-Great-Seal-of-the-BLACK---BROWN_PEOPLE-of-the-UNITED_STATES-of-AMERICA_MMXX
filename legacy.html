@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Legacy Vault | Sovereign Trusts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #0d0d0d; }
+        body { background: var(--obsidian); color: #d1d1d1; font-family: 'Inter', sans-serif; margin: 0; }
+        
+        .legacy-hero { padding: 60px 5%; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('vault-interior.jpg'); border-bottom: 1px solid var(--gold); text-align: center; }
+        .legacy-hero h1 { font-family: 'Cinzel'; font-size: 2.2rem; color: white; margin: 0; }
+        
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+        
+        .trust-card { background: #111; border: 1px solid #222; padding: 35px; position: relative; transition: 0.3s; }
+        .trust-card:hover { border-color: var(--gold); box-shadow: 0 0 20px rgba(197, 160, 89, 0.1); }
+        
+        .trust-card h3 { font-family: 'Cinzel'; color: var(--gold); margin-top: 0; }
+        .trust-card p { font-size: 0.85rem; line-height: 1.6; color: #888; }
+        
+        .asset-list { margin: 20px 0; padding: 0; list-style: none; font-size: 0.75rem; border-top: 1px solid #222; padding-top: 15px; }
+        .asset-list li { margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .asset-list li span { color: var(--gold); font-weight: bold; }
+
+        .action-btn { display: block; width: 100%; padding: 12px; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-align: center; text-decoration: none; font-family: 'Cinzel'; font-size: 0.8rem; margin-top: 20px; transition: 0.3s; }
+        .action-btn:hover { background: var(--gold); color: black; }
+        
+        .seal-bg { position: absolute; bottom: 10px; right: 10px; opacity: 0.05; width: 80px; }
+    </style>
+</head>
+<body>
+
+    <header class="legacy-hero">
+        <h1>The Legacy Vault</h1>
+        <p style="color:var(--gold); font-family:'Cinzel'; font-size: 0.8rem; letter-spacing: 2px; margin-top:10px;">GENERATIONAL WEALTH PROTECTION</p>
+    </header>
+
+    <main class="trust-grid">
+        <div class="trust-card">
+            <h3>Village Living Trust</h3>
+            <p>A comprehensive vehicle for residential property and personal assets, ensuring zero-probate transfer to your beneficiaries within the Node.</p>
+            <ul class="asset-list">
+                <li>Primary Residence Protection <span>ENABLED</span></li>
+                <li>Succession Planning <span>INCLUDED</span></li>
+                <li>Bureau Oversight <span>OPTIONAL</span></li>
+            </ul>
+            <a href="#" class="action-btn">Draft Trust Instrument</a>
+        </div>
+
+        <div class="trust-card">
+            <h3>Enterprise Succession</h3>
+            <p>Protect your Business Entity within the Family of Corporations. Defines how your "Seal of Approval" transfers to the next generation.</p>
+            <ul class="asset-list">
+                <li>Tax ID Continuity <span>ENABLED</span></li>
+                <li>Foundry Contract Rights <span>PROTECTED</span></li>
+                <li>Partnership Shield <span>ACTIVE</span></li>
+            </ul>
+            <a href="#" class="action-btn">Secure Business Legacy</a>
+        </div>
+
+        <div class="trust-card" style="border-color: var(--gold);">
+            <div style="position:absolute; top:-12px; left:20px; background:var(--gold); color:black; font-size:0.6rem; padding:2px 8px; font-weight:bold;">MOST SECURE</div>
+            <h3>Sovereign Identity Trust</h3>
+            <p>Management of your digital assets, Identity Coins, and "Goodness Credits." Allows your lineage to inherit your Bureau standing.</p>
+            <ul class="asset-list">
+                <li>Digital Asset Custody <span>ENCRYPTED</span></li>
+                <li>Heritage Data Portability <span>YES</span></li>
+                <li>Ancestral Tier Locking <span>ENABLED</span></li>
+            </ul>
+            <a href="#" class="action-btn" style="background:var(--gold); color:black;">Initialize Trust</a>
+        </div>
+    </main>
+
+    <div style="text-align: center; padding-bottom: 60px;">
+        <p style="font-size: 0.7rem; color: #444;">All documents are prepared according to the TGSOBA Private Governance Code and state-specific statutory requirements.</p>
+    </div>
+
+</body>
+</html>
