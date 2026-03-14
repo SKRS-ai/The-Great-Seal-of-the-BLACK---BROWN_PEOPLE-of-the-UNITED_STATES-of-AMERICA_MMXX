@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillar Infrastructure | TBBLUSA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --blueprint-blue: #0a192f;
+            --marble-white: #f5f5f5;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        /* Technical Header */
+        .blueprint-nav {
+            background: var(--blueprint-blue);
+            padding: 15px 5%;
+            border-bottom: 1px solid var(--gold);
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--gold);
+        }
+
+        .hero-title {
+            padding: 60px 5%;
+            text-align: left;
+            border-left: 5px solid var(--gold);
+            margin: 40px 5%;
+            background: linear-gradient(to right, #111, transparent);
+        }
+
+        .hero-title h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+        }
+
+        /* The Blueprint Display */
+        .blueprint-display {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--blueprint-blue);
+            border: 2px dashed rgba(197, 160, 89, 0.3);
+            position: relative;
+        }
+
+        .blueprint-display::before {
+            content: "ARCHITECTURAL SPEC: TBBL-PH-01";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 0.6rem;
+            color: var(--gold);
+        }
+
+        /* Asset Grid */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 0 5% 100px 5%;
+        }
+
+        .asset-card {
+            background: #0f0f0f;
+            border: 1px solid #222;
+            padding: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .asset-card:hover {
+            border-color: var(--gold);
+        }
+
+        .asset-img {
+            width: 100%;
+            height: 200px;
+            background: #222;
+            /* In a real scenario, this would be a 3D render of the Philly Pillar House */
+            background-image: url('Gemini_Generated_Image_npzjminpzjminpzj (1).jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+        }
+
+        .asset-content {
+            padding: 25px;
+        }
+
+        .asset-tag {
+            font-size: 0.65rem;
+            background: var(--gold);
+            color: black;
+            padding: 2px 6px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .infrastructure-btn {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+
+        .infrastructure-btn:hover {
+            background: var(--gold);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="blueprint-nav">
+        <div>Action Line 4 // Infrastructure & Housing</div>
+        <div>Model: The Philadelphia Alpha Site</div>
+    </nav>
+
+    <div class="hero-title">
+        <h1>The Pillar House</h1>
+        <p>From Digital Sovereignty to Physical Permanent Fixtures.</p>
+    </div>
+
+    <section class="blueprint-display">
+        <h3 style="font-family: 'Cinzel'; color: white;">Facility Specifications</h3>
+        <p style="font-size: 0.9rem; color: #8ba4c9;">Our first building in Philadelphia serves as the prototype for national expansion. It is a multi-use monument designed for community resilience.</p>
+        
+        <div style="display: flex; gap: 20px; margin-top: 20px;">
+            <div style="flex: 1; border-right: 1px solid rgba(197, 160, 89, 0.2);">
+                <span style="color:var(--gold)">Level 01:</span> The Plaza (Intake/Kitchen)
+            </div>
+            <div style="flex: 1; border-right: 1px solid rgba(197, 160, 89, 0.2);">
+                <span style="color:var(--gold)">Level 02:</span> The Foundry (Tech Lab)
+            </div>
+            <div style="flex: 1;">
+                <span style="color:var(--gold)">Level 03:</span> Sovereign Residency
+            </div>
+        </div>
+    </section>
+
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="asset-img"></div>
+            <div class="asset-content">
+                <div class="asset-tag">Acquisition Phase</div>
+                <h3 style="color:white; font-family:'Cinzel';">Philly Alpha Site</h3>
+                <p style="font-size: 0.8rem;">Strategic acquisition of distressed historical assets to be converted into Pillar Houses.</p>
+                <a href="#" class="infrastructure-btn">View Site Plan</a>
+            </div>
+        </div>
+
+        <div class="asset-card">
+            <div class="asset-img" style="filter: hue-rotate(180deg);"></div>
+            <div class="asset-content">
+                <div class="asset-tag">Expansion Phase</div>
+                <h3 style="color:white; font-family:'Cinzel';">Minnesota Node</h3>
+                <p style="font-size: 0.8rem;">Scaling the Village Logic to our second national hub. Mirroring the Philly blueprints.</p>
+                <a href="#" class="infrastructure-btn">Expansion Roadmap</a>
+            </div>
+        </div>
+
+        <div class="asset-card">
+            <div class="asset-img" style="filter: saturate(0);"></div>
+            <div class="asset-content">
+                <div class="asset-tag">HUD Alignment</div>
+                <h3 style="color:white; font-family:'Cinzel';">Permanent Housing</h3>
+                <p style="font-size: 0.8rem;">Transitioning from shelters to Sovereign ownership. Housing for Tier 4 Architects.</p>
+                <a href="#" class="infrastructure-btn">Residency Requirements</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
