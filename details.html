@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #0d0d0d; }
+        body { background: var(--obsidian); color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
+        
+        header { padding: 30px 5%; border-bottom: 1px solid var(--gold); background: #000; }
+        .nav-back { color: var(--gold); text-decoration: none; font-family: 'Cinzel'; font-size: 0.8rem; }
+
+        .detail-section { padding: 100px 10%; border-bottom: 1px solid #222; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .detail-section:nth-child(even) { background: #0a0a0a; direction: rtl; }
+        .detail-section:nth-child(even) .text-side { direction: ltr; }
+
+        .img-placeholder { background: #111; border: 1px solid var(--gold); height: 400px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .img-placeholder::after { content: "OFFICIAL BUREAU HARDWARE"; font-family: 'Cinzel'; font-size: 0.6rem; color: #333; position: absolute; bottom: 10px; }
+
+        h2 { font-family: 'Cinzel'; color: var(--gold); font-size: 2rem; margin-top: 0; }
+        .price-badge { display: inline-block; padding: 5px 15px; border: 1px solid var(--gold); color: var(--gold); font-family: 'Cinzel'; font-weight: bold; margin-bottom: 20px; }
+        
+        .feature-list { list-style: none; padding: 0; margin: 25px 0; }
+        .feature-list li { margin-bottom: 12px; font-size: 0.9rem; color: #888; border-left: 2px solid var(--gold); padding-left: 15px; }
+        
+        .btn-buy { background: var(--gold); color: black; border: none; padding: 15px 40px; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="marketplace.html" class="nav-back">← RETURN TO MARKETPLACE</a>
+</header>
+
+<section class="detail-section" id="pillar-id">
+    <div class="img-placeholder">
+        <span style="color:var(--gold); font-family:'Cinzel';">PILLAR ID VISUAL</span>
+    </div>
+    <div class="text-side">
+        <div class="price-badge">$45.00</div>
+        <h2>Physical Pillar ID Card</h2>
+        <p>The primary key to the Village. This NFC-enabled matte black PVC card provides instant biometric verification and secure entry to all National Nodes.</p>
+        <ul class="feature-list">
+            <li>NTAG215 Encrypted Chip</li>
+            <li>Tap-to-Verify Profile Sync</li>
+            <li>Durable UV-Resistant Coating</li>
+        </ul>
+        <a href="cart.html" class="btn-buy">ADD TO VAULT</a>
+    </div>
+</section>
+
+<section class="detail-section" id="reentry-cert">
+    <div class="img-placeholder">
+        <span style="color:var(--gold); font-family:'Cinzel';">CERTIFICATE SEAL</span>
+    </div>
+    <div class="text-side">
+        <div class="price-badge">$99.00</div>
+        <h2>Employer Re-Entry Cert</h2>
+        <p>Replace your "history" with your "standing." This certificate proves your adherence to the Goodness Code and provides hiring partners with a verified restoration report.</p>
+        <ul class="feature-list">
+            <li>DOJ/Bureau Handshake Verified</li>
+            <li>Mind Damage Module Completion Badge</li>
+            <li>Restorative Justice Legal Shield</li>
+        </ul>
+        <a href="cart.html" class="btn-buy">CLAIM CERTIFICATION</a>
+    </div>
+</section>
+
+<section class="detail-section" id="vinyl-seal">
+    <div class="img-placeholder">
+        <span style="color:var(--gold); font-family:'Cinzel';">STOREFRONT SEAL</span>
+    </div>
+    <div class="text-side">
+        <div class="price-badge">$75.00</div>
+        <h2>Great Seal Storefront Vinyl</h2>
+        <p>Identify your business as a Safe Haven within the Village network. This 6-inch metallic gold vinyl marks your location as a Foundry-partnered enterprise.</p>
+        <ul class="feature-list">
+            <li>High-Prestige Metallic Gold Finish</li>
+            <li>Weatherproof Exterior Grade</li>
+            <li>Signals Village-Logic Commerce Zone</li>
+        </ul>
+        <a href="cart.html" class="btn-buy">APPLY FOR SEAL</a>
+    </div>
+</section>
+
+<footer style="padding: 60px; text-align: center; color: #444; font-size: 0.7rem;">
+    THE BUREAU OF NATIONAL IDENTITY // DOCUMENTING INDIVIDUALITY SINCE 2026
+</footer>
+
+</body>
+</html>
