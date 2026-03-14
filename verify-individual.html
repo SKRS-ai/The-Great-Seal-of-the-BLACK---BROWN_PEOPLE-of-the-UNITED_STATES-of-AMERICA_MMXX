@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Verification | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 50px 5%; }
+        .form-header { border-left: 4px solid var(--gold); padding-left: 20px; margin-bottom: 40px; }
+        .form-section { background: var(--slate); border: 1px solid #222; padding: 40px; margin-bottom: 30px; }
+        h3 { font-family: 'Cinzel'; color: var(--gold); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        label { display: block; font-size: 0.7rem; color: #888; text-transform: uppercase; margin-bottom: 5px; margin-top: 15px; }
+        input, select, textarea { width: 100%; padding: 12px; background: #000; border: 1px solid #333; color: white; box-sizing: border-box; }
+        .req { color: var(--gold); }
+        .nav-btns { display: flex; justify-content: space-between; margin-top: 40px; }
+        .btn { padding: 15px 40px; font-family: 'Cinzel'; cursor: pointer; text-decoration: none; font-weight: bold; }
+        .btn-gold { background: var(--gold); color: black; border: none; }
+    </style>
+</head>
+<body>
+
+    <div class="form-header">
+        <h1 style="font-family:'Cinzel'; margin:0;">Identity Enhancement Intake</h1>
+        <p style="color:var(--gold)">Documenting the Individual. Verifying the Pillar.</p>
+    </div>
+
+    <form action="products.html">
+        <div class="form-section">
+            <h3>I. Heritage & Ancestry</h3>
+            <div class="grid">
+                <div>
+                    <label>Full Legal Name <span class="req">*</span></label>
+                    <input type="text" placeholder="First Middle Last">
+                </div>
+                <div>
+                    <label>Sovereign Alias (Optional)</label>
+                    <input type="text" placeholder="Village Designation">
+                </div>
+            </div>
+            <label>Ancestral Origin / Lineage Notes</label>
+            <textarea rows="3" placeholder="Provide any known family history for the National Registry mapping..."></textarea>
+        </div>
+
+        <div class="form-section">
+            <h3>II. Restoration Status</h3>
+            <label>Are you currently "Justice-Involved" or a Returning Citizen?</label>
+            <select>
+                <option>No - Community Supporter</option>
+                <option>Yes - Seeking Goodness Code Certification</option>
+                <option>Yes - Active Re-entry Phase</option>
+            </select>
+            <label>Primary Skillset / Trade (For Economic Foundry Placement)</label>
+            <input type="text" placeholder="e.g. Logistics, Coding, Carpentry, Management">
+        </div>
+
+        <div class="form-section">
+            <h3>III. Product & Tier Selection</h3>
+            <label>Select Your Starting Tier</label>
+            <select style="border: 1px solid var(--gold)">
+                <option>Pillar Citizen - $19.99/mo</option>
+                <option>Sovereign Architect - $49.99/mo</option>
+                <option>Legacy Seal Holder (One-time) - $150.00</option>
+            </select>
+            <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">By submitting, you agree to the Goodness Code and the Bureau's Terms of Sovereignty.</p>
+        </div>
+
+        <div class="nav-btns">
+            <a href="register.html" style="color:#666; text-decoration:none; padding-top:15px;">← Back to Initial Registry</a>
+            <button type="submit" class="btn btn-gold">Confirm & Proceed to Payment</button>
+        </div>
+    </form>
+
+</body>
+</html>
