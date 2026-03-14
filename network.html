@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Network | TBBLUSA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --slate: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .network-header {
+            padding: 60px 5%;
+            text-align: center;
+            background: linear-gradient(to bottom, #111, var(--obsidian));
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .network-header h1 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        /* The Hub Map Area */
+        .map-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .map-visual {
+            background: #000;
+            border: 1px solid #333;
+            height: 450px;
+            position: relative;
+            /* In a live site, this would be an interactive SVG or Leaflet Map */
+            background-image: radial-gradient(circle at 30% 40%, var(--gold) 2px, transparent 4px),
+                              radial-gradient(circle at 45% 35%, var(--gold) 2px, transparent 4px);
+            background-color: #080808;
+            box-shadow: inset 0 0 50px rgba(0,0,0,1);
+        }
+
+        .node-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .node-card {
+            background: var(--slate);
+            border-left: 4px solid var(--gold);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .node-card:hover {
+            background: #222;
+            transform: translateX(10px);
+        }
+
+        .node-title {
+            font-family: 'Cinzel', serif;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .node-status {
+            font-size: 0.7rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .btn-connect {
+            display: inline-block;
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        .footer-cta {
+            text-align: center;
+            padding: 100px 5%;
+            background: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="network-header">
+        <h1>National Sovereign Network</h1>
+        <p style="color: var(--gold); font-size: 0.8rem; margin-top: 10px;">Connecting the Pillars: From Philadelphia to the Nation</p>
+    </header>
+
+    <section class="map-section">
+        <div class="map-visual">
+            <div style="position: absolute; top: 40%; left: 30%; color: var(--gold); font-family: 'Cinzel'; font-size: 0.6rem;">
+                ● ALPHA NODE (PHL)
+            </div>
+            <div style="position: absolute; top: 32%; left: 45%; color: #888; font-family: 'Cinzel'; font-size: 0.6rem;">
+                ● EXPANSION NODE (MN)
+            </div>
+        </div>
+
+        <div>
+            <h2 style="font-family: 'Cinzel'; color: white;">Active Regional Nodes</h2>
+            <p style="font-size: 0.9rem; color: #777;">The Bureau operates through decentralized hubs. Each Node manages its own local <strong>Pillar House</strong> and <strong>Economic Foundry</strong> while staying synced to the National Registry.</p>
+            
+            <ul class="node-list">
+                <li class="node-card">
+                    <span class="node-status">Status: Fully Operational</span>
+                    <h3 class="node-title">Philadelphia Alpha Node</h3>
+                    <p style="font-size: 0.8rem;">Headquarters of the Bureau of National Identity. Home of the first physical Pillar House monument.</p>
+                    <a href="#" class="btn-connect">View Local Registry</a>
+                </li>
+                
+                <li class="node-card">
+                    <span class="node-status">Status: Initialization Phase</span>
+                    <h3 class="node-title">Minnesota Node</h3>
+                    <p style="font-size: 0.8rem;">Expansion hub focusing on Youth Diversification and the Unity League framework.</p>
+                    <a href="#" class="btn-connect">Join Chapter</a>
+                </li>
+
+                <li class="node-card" style="opacity: 0.5;">
+                    <span class="node-status">Status: Pending Verification</span>
+                    <h3 class="node-title">Southern Regional Node</h3>
+                    <p style="font-size: 0.8rem;">Future site for the Agricultural & Land Sovereignty initiative.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-cta">
+        <h2 style="font-family: 'Cinzel'; color: white;">Start a Local Pillar Club</h2>
+        <p style="max-width: 600px; margin: 20px auto; font-size: 0.9rem;">Bring the Village Logic to your city. Download the <strong>Sovereign-Village-OS</strong> blueprint and apply for Node Certification.</p>
+        <a href="#" class="btn-connect" style="font-size: 1rem; border: 1px solid var(--gold); padding: 15px 30px;">Request Chapter License</a>
+    </div>
+
+</body>
+</html>
