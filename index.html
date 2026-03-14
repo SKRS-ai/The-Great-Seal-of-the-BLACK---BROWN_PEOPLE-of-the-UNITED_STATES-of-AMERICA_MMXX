@@ -3,92 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CastAiStars | The Digital Backlot</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>TGSOBAUSA | Bureau of National Identity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; }
-        
-        /* Nebula Pulse Animation */
-        @keyframes nebula-pulse {
-            0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.4)); }
-            50% { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.8)); }
-            100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.4)); }
+        :root {
+            --obsidian: #0a0a0a;
+            --gold: #c5a059;
+            --gold-muted: #8e7341;
+            --marble: #e0e0e0;
+            --slate: #1a1a1a;
         }
-        .nebula-star {
-            animation: nebula-pulse 4s ease-in-out infinite;
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--obsidian);
+            color: var(--marble);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #00e5ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        h1, h2, h3, .monumental-text {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        .glass-panel {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        /* Hero Section - The Monument */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 1px solid var(--gold-muted);
+        }
+
+        .seal-container {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 2rem;
+            position: relative;
+            filter: drop-shadow(0 0 30px rgba(197, 160, 89, 0.2));
+            transition: transform 0.5s ease;
+        }
+
+        .seal-container:hover {
+            transform: scale(1.05);
+        }
+
+        /* This is where your 3D Coin Asset would be rendered */
+        .seal-placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url('Gemini_Generated_Image_npzjminpzjminpzj (1).jpg') no-repeat center center;
+            background-size: cover;
+            border: 4px solid var(--gold);
+        }
+
+        .bureau-header {
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Sovereign Portal Links */
+        .portal-links {
+            margin-top: 3rem;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--obsidian);
+            box-shadow: 0 0 15px var(--gold-muted);
+        }
+
+        /* Pillars Section */
+        .pillars-section {
+            padding: 100px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillar-card {
+            background: var(--slate);
+            padding: 40px;
+            border-top: 3px solid var(--gold);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .pillar-card:hover {
+            background: #222;
+        }
+
+        .pillar-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer / Legal Statement */
+        footer {
+            background: #000;
+            padding: 60px 10%;
+            font-size: 0.75rem;
+            border-top: 1px solid #333;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .legal-box {
+            border: 1px solid #333;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 5px #00ff00;
         }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 glass-panel">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-cyan-500 rounded flex items-center justify-center nebula-star">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                </div>
-                <span class="text-2xl font-black tracking-tighter uppercase">Cast<span class="text-cyan-400">AI</span>Stars</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-400">
-                <a href="#" class="hover:text-cyan-400 transition">The Backlot</a>
-                <a href="#" class="hover:text-cyan-400 transition">For Directors</a>
-                <a href="#" class="hover:text-cyan-400 transition">For Creators</a>
-            </div>
-            <button class="bg-white text-black px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-cyan-400 transition">Beta Access</button>
+    <section class="hero">
+        <div class="bureau-header">Bureau of National Identity // Official Repository</div>
+        <div class="seal-container">
+            <div class="seal-placeholder"></div>
         </div>
-    </nav>
-
-    <section class="relative h-screen flex items-center justify-center pt-20">
-        <div class="absolute inset-0 z-0 opacity-30">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-600 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-900 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
-        </div>
-
-        <div class="relative z-10 text-center max-w-4xl px-6">
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
-                THE FUTURE OF FAME IS <span class="text-gradient">SYNTHETIC.</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light max-w-2xl mx-auto">
-                Welcome to the Headquarters. Cast verified virtual stars for your next production. Powered by <span class="text-white font-bold">Solomon Kin Records</span>.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button class="bg-cyan-500 text-black px-10 py-4 rounded-lg font-black text-lg uppercase tracking-widest hover:bg-cyan-400 shadow-[0_0_20px_rgba(0,229,255,0.4)] transition">Enter the Office</button>
-                <button class="border border-gray-700 hover:border-white px-10 py-4 rounded-lg font-black text-lg uppercase tracking-widest transition">Register a Star</button>
-            </div>
+        <h1 class="main-title">The Great Seal of Black America</h1>
+        <p class="monumental-text" style="font-size: 1rem; color: #888; margin-top: 10px;">The Pillars of America | Sovereign-Village-OS</p>
+        
+        <div class="portal-links">
+            <a href="#vault" class="btn">Access Sovereign Vault</a>
+            <a href="#registry" class="btn">Registry Verification</a>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">Verified Continuity</h3>
-                <p class="text-gray-400">Our stars maintain visual consistency across every scene. No "uncanny valley," just professional assets.</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">The Digital Soul</h3>
-                <p class="text-gray-400">Every talent registry includes a unique, consistent Voice ID curated by Solomon Kin Records.</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">Smart Licensing</h3>
-                <p class="text-gray-400">Automated casting contracts that protect creators and empower directors in one click.</p>
-            </div>
+    <section class="pillars-section">
+        <div class="pillar-card">
+            <h3>Justice</h3>
+            <p>The Goodness Code: Replacing recidivism with verified community restoration.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>Economy</h3>
+            <p>The Economic Foundry: Federal contract readiness and community sovereignty.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>Youth</h3>
+            <p>Pillar Clubs: Positive identity architecture for the next generation.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>Infrastructure</h3>
+            <p>Pillar Houses: Building physical monuments of stability and technology.</p>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-gray-900 text-center text-gray-600">
-        <p class="text-xs uppercase tracking-[0.5em]">&copy; 2026 Solomon Kin Records LLC. All Rights Reserved.</p>
+    <footer>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <span class="status-indicator"></span> SYSTEM STATUS: SECURE | ENCRYPTION: ACTIVE | REGISTRY: 2026.1
+        </div>
+        
+        <div class="legal-box">
+            <p><strong>OFFICIAL NOTICE:</strong> The Great Seal of Black and Brown People of the United States and the Pillars of America framework are the exclusive property of Solomon Kin Records and TBBLUSA. Copyright © 2026. Unauthorized use of these monumental symbols is strictly prohibited under Federal Law.</p>
+            <p>TGSOBAUSA.ORG operates as a Solution-Based Organization in alignment with DOJ, HUD, and MBDA initiatives.</p>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px;">
+            Established in Philadelphia. Fortified in Minnesota. Bound by the Goodness Code.
+        </p>
     </footer>
 
 </body>
