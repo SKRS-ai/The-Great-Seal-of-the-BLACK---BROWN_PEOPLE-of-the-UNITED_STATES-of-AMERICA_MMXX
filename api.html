@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Docs | Sovereign-Village-OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --code-bg: #1e1e1e; }
+        body { background: var(--obsidian); color: #d1d1d1; font-family: 'Inter', sans-serif; margin: 0; display: flex; }
+        
+        .sidebar { width: 280px; background: #000; height: 100vh; border-right: 1px solid #222; padding: 40px 20px; position: fixed; }
+        .main-content { margin-left: 320px; padding: 60px 5%; max-width: 900px; }
+        
+        h1, h2, h3 { font-family: 'Inter', sans-serif; color: white; }
+        .endpoint { color: var(--gold); font-family: 'Fira Code', monospace; background: #1a1a1a; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; }
+        
+        .code-block { background: var(--code-bg); padding: 20px; border-radius: 8px; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #9cdcfe; margin: 20px 0; border: 1px solid #333; overflow-x: auto; }
+        .code-comment { color: #6a9955; }
+        .code-key { color: #ce9178; }
+
+        .method { font-weight: bold; padding: 2px 8px; border-radius: 3px; font-size: 0.7rem; margin-right: 10px; }
+        .get { background: #2e7d32; color: white; }
+        .post { background: #1565c0; color: white; }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2 style="font-size: 1.2rem; color: var(--gold);">SV-OS API</h2>
+        <nav style="margin-top: 30px;">
+            <p style="font-size: 0.7rem; color: #555;">AUTHENTICATION</p>
+            <a href="#" style="display:block; color:white; text-decoration:none; margin-bottom:15px; font-size: 0.85rem;">OAuth2 Integration</a>
+            <p style="font-size: 0.7rem; color: #555;">ENDPOINTS</p>
+            <a href="#" style="display:block; color:#888; text-decoration:none; margin-bottom:15px; font-size: 0.85rem;">Verify Identity</a>
+            <a href="#" style="display:block; color:#888; text-decoration:none; margin-bottom:15px; font-size: 0.85rem;">Fetch Goodness Credits</a>
+            <a href="#" style="display:block; color:#888; text-decoration:none; margin-bottom:15px; font-size: 0.85rem;">Node Access Logs</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h1>API Reference</h1>
+        <p>Integrate the Sovereign-Village-OS Identity Registry into your enterprise applications.</p>
+
+        <section style="margin-top: 50px;">
+            <h2><span class="method get">GET</span> <span class="endpoint">/v1/identity/verify</span></h2>
+            <p>Retrieve the verified status and Pillar Tier of a registered individual using their Sovereign ID.</p>
+            
+            <div class="code-block">
+                <span class="code-comment">// Example Request</span><br>
+                curl -X GET "https://api.tgsobausa.org/v1/identity/verify?id=PHL-8821-SOV" \<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;-H "Authorization: Bearer YOUR_API_KEY"
+            </div>
+
+            <div class="code-block">
+                <span class="code-comment">// Example JSON Response</span><br>
+                {<br>
+                &nbsp;&nbsp;"id": <span class="code-key">"PHL-8821-SOV"</span>,<br>
+                &nbsp;&nbsp;"status": <span class="code-key">"VERIFIED"</span>,<br>
+                &nbsp;&nbsp;"tier": <span class="code-key">"Architect"</span>,<br>
+                &nbsp;&nbsp;"goodness_score": <span class="code-key">942</span>,<br>
+                &nbsp;&nbsp;"last_checkin": <span class="code-key">"2026-03-14T10:00:00Z"</span><br>
+                }
+            </div>
+        </section>
+
+        <section style="margin-top: 50px; border-top: 1px solid #222; padding-top: 40px;">
+            <h2>Webhooks</h2>
+            <p>Subscribe to real-time events, such as when a member completes a **Mind Damage** module or achieves a new Tier.</p>
+            <div class="code-block">
+                EVENT: <span class="code-key">"tier.upgraded"</span><br>
+                ACTION: Update internal payroll/contract eligibility.
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
