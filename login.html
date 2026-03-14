@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Access | TGSOBA Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --alert: #4a0e0e;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--obsidian);
+            background-image: radial-gradient(circle at center, #111 0%, #050505 100%);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* The Portal Frame */
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid #222;
+            padding: 50px;
+            text-align: center;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .portal-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px auto;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: url('Gemini_Generated_Image_npzjminpzjminpzj (1).jpg') center/cover;
+            filter: grayscale(0.5) contrast(1.2);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .security-clearance {
+            font-size: 0.7rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Form Styling */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            border: 1px solid #333;
+            color: var(--gold);
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .access-btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .access-btn:hover {
+            background: var(--gold);
+            color: black;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+        }
+
+        .notice {
+            margin-top: 30px;
+            font-size: 0.6rem;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .system-status {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.6rem;
+            color: #333;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="portal-logo"></div>
+        <h2>Sovereign Vault</h2>
+        <div class="security-clearance">Authorization Required</div>
+
+        <form>
+            <div class="input-group">
+                <label>Pillar ID / Sovereign Email</label>
+                <input type="text" placeholder="GSO-XXXX-XXXX">
+            </div>
+            <div class="input-group">
+                <label>Security Key (Biometric Token)</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button type="button" class="access-btn">Verify Identity</button>
+        </form>
+
+        <div class="notice">
+            <strong>WARNING:</strong> This is a protected repository of TBBLUSA.ORG. 
+            Unauthorized access attempts are logged and reported to the Bureau of National Identity. 
+            Access is granted only to verified Builders, Architects, and Sovereigns.
+        </div>
+    </div>
+
+    <div class="system-status">
+        ENCRYPTION: AES-256 | NODE: PHILADELPHIA_ALPHA | IP: LOGGED
+    </div>
+
+</body>
+</html>
