@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #1a1a1a; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        
+        .reg-container { width: 90%; max-width: 600px; background: var(--slate); border: 1px solid var(--gold); padding: 50px; position: relative; }
+        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-top: 0; }
+        
+        /* Social Buttons */
+        .social-auth { display: flex; gap: 10px; margin-bottom: 30px; }
+        .auth-btn { flex: 1; padding: 12px; border: 1px solid #333; background: #000; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+        .auth-btn:hover { border-color: var(--gold); }
+
+        /* Cortana/Voice Trigger Mockup */
+        .voice-trigger { background: linear-gradient(45deg, #111, #222); padding: 15px; text-align: center; border: 1px dashed var(--gold); margin-bottom: 30px; cursor: pointer; }
+        
+        form label { display: block; font-size: 0.7rem; color: var(--gold); text-transform: uppercase; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 12px; background: #000; border: 1px solid #333; color: white; margin-bottom: 20px; }
+        .submit-btn { width: 100%; padding: 15px; background: var(--gold); color: black; font-family: 'Cinzel'; font-weight: bold; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="reg-container">
+    <h2>Initialize Your Identity</h2>
+    
+    <div class="voice-trigger">
+        <span style="color:var(--gold)">🎙️</span> "Cortana, Register my Sovereign Identity"
+    </div>
+
+    <div class="social-auth">
+        <button class="auth-btn">Google Access</button>
+        <button class="auth-btn">Apple ID</button>
+        <button class="auth-btn">LinkedIn</button>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 20px; color: #444;">— OR MANUALLY REGISTER —</div>
+
+    <form action="payment.html">
+        <label>Select Registration Sector</label>
+        <select>
+            <option>Individual Citizen (Pillar/Architect)</option>
+            <option>Small Business (Seal of Approval)</option>
+            <option>Enterprise (Logistics/Corporate)</option>
+            <option>Foundation/Philanthropy (Donation-Base)</option>
+        </select>
+
+        <label>Full Legal Name / Entity Name</label>
+        <input type="text" placeholder="John Doe / Acme Corp">
+
+        <label>Regional Node</label>
+        <select>
+            <option>Philadelphia Alpha Node</option>
+            <option>Minnesota Expansion Node</option>
+            <option>Remote/Digital Resident</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Continue to Tier Selection</button>
+    </form>
+</div>
+
+</body>
+</html>
