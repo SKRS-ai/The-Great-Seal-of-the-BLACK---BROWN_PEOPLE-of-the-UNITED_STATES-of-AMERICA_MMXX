@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile ID | Sovereign-Village-OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --slate: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Mockup Mobile Frame */
+        .phone-frame {
+            width: 375px;
+            height: 700px;
+            background: #000;
+            border: 8px solid #222;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+        }
+
+        .screen {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Digital ID Card */
+        .id-card {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            border: 1px solid var(--gold);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .card-seal {
+            width: 60px;
+            height: 60px;
+            background: url('Gemini_Generated_Image_npzjminpzjminpzj (1).jpg') center/cover;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .card-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-top: 60px;
+        }
+
+        .card-number {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        /* QR Verification */
+        .qr-section {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .qr-placeholder {
+            width: 140px;
+            height: 140px;
+            background: url('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TGSOBA-PHL-7701') center/cover;
+        }
+
+        /* Quick Stats */
+        .quick-stats {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat-pill {
+            background: var(--slate);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-label { font-size: 0.6rem; color: #888; text-transform: uppercase; }
+        .stat-val { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1rem; }
+
+        .nav-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background: #111;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <div class="screen">
+            <div style="font-family: 'Cinzel'; font-size: 0.7rem; color: var(--gold); margin-bottom: 20px;">
+                BUREAU OF NATIONAL IDENTITY
+            </div>
+            
+            <div class="id-card">
+                <div class="card-seal"></div>
+                <div class="card-name">Pillar Builder</div>
+                <div class="card-number">PHL-7701-SOV</div>
+                <div style="margin-top: 20px; font-size: 0.7rem; color: #aaa;">
+                    STATUS: <span style="color:var(--gold)">ACTIVE</span><br>
+                    EXPIRY: 03/2027
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-placeholder"></div>
+            </div>
+            <p style="font-size: 0.7rem; color: #666; margin-bottom: 30px;">Scan to Verify Sovereignty</p>
+
+            <div class="quick-stats">
+                <div class="stat-pill">
+                    <div class="stat-label">Goodness Credits</div>
+                    <div class="stat-val">840</div>
+                </div>
+                <div class="stat-pill">
+                    <div class="stat-label">Access Level</div>
+                    <div class="stat-val">Tier 3</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <button style="width: 100%; padding: 12px; background: var(--gold); border: none; font-family: 'Cinzel'; font-weight: bold; border-radius: 5px;">Check-In: Philly Pillar House</button>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <span style="color:var(--gold)">●</span>
+            <span style="color:#444">■</span>
+            <span style="color:#444">▲</span>
+        </div>
+    </div>
+
+</body>
+</html>
