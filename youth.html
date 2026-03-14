@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Diversification | TBBLUSA Pillar Clubs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --ivory: #f9f9f9;
+            --slate: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .academy-header {
+            background: linear-gradient(to bottom, #111, #000);
+            padding: 40px 5%;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .academy-header h1 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .motto {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Club Framework Sections */
+        .club-section {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .club-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .club-info {
+            flex: 1;
+        }
+
+        .club-visual {
+            flex: 1;
+            height: 350px;
+            background: var(--slate);
+            border: 1px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+            background-image: url('Gemini_Generated_Image_npzjminpzjminpzj (1).jpg');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(0.5);
+        }
+
+        .club-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: white;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Program List */
+        .program-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+        }
+
+        .program-list li::before {
+            content: "✦";
+            color: var(--gold);
+            margin-right: 15px;
+        }
+
+        .enroll-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .enroll-btn:hover {
+            background: var(--gold);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="academy-header">
+        <h1>The Pillar Clubs</h1>
+        <div class="motto">Identity. Integrity. Infrastructure.</div>
+    </header>
+
+    <div class="container">
+        
+        <section class="club-section">
+            <div class="club-info">
+                <h2 class="club-title">Heritage Clubs</h2>
+                <p>Establishing the Great Seal as a badge of honor. Our youth programs focus on "Positive Identity Architecture," teaching history not as a burden, but as a blueprint for leadership.</p>
+                <ul class="program-list">
+                    <li>Ancestral Legacy Education</li>
+                    <li>The "Goodness Code" for Youth</li>
+                    <li>Civic Engagement & Voting Readiness</li>
+                </ul>
+                <a href="#" class="enroll-btn">Register Chapter</a>
+            </div>
+            <div class="club-visual"></div>
+        </section>
+
+        <section class="club-section">
+            <div class="club-info">
+                <h2 class="club-title">The Unity League</h2>
+                <p>Competitive but collaborative programs that connect youth from Philadelphia to Minnesota. We prioritize STEM, Robotics, and Debate—preparing them for the Economic Foundry.</p>
+                <ul class="program-list">
+                    <li>National Robotics Invitational</li>
+                    <li>Public Speaking & Policy Debate</li>
+                    <li>Village Defense & Athletics</li>
+                </ul>
+                <a href="#" class="enroll-btn">Join League</a>
+            </div>
+            <div class="club-visual" style="filter: hue-rotate(45deg);"></div>
+        </section>
+
+        <section class="club-section">
+            <div class="club-info">
+                <h2 class="club-title">Safe Zone Awareness</h2>
+                <p>Using the TBBL Seal to mark "Safe Haven" businesses and community centers. Our youth act as "Village Guardians," promoting safety and mutual respect.</p>
+                <ul class="program-list">
+                    <li>Safe Haven Business Certification</li>
+                    <li>High-Visibility Awareness Campaigns</li>
+                    <li>Community Guardian Training</li>
+                </ul>
+                <a href="#" class="enroll-btn">View Map</a>
+            </div>
+            <div class="club-visual" style="filter: sepia(0.5);"></div>
+        </section>
+
+    </div>
+
+    <footer style="text-align: center; padding: 60px; border-top: 1px solid #222; font-family: 'Cinzel'; font-size: 0.7rem; color: var(--gold);">
+        © 2026 TBBLUSA.ORG | SHAPING THE PILLARS OF TOMORROW
+    </footer>
+
+</body>
+</html>
