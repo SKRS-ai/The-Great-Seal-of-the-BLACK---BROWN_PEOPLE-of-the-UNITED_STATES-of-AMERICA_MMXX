@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry Search | Bureau of National Identity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --slate: #1a1a1a;
+            --ivory: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: var(--ivory);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .search-header {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #222;
+            background: linear-gradient(to bottom, #111, #050505);
+        }
+
+        .search-header h1 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .search-container {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            background: var(--slate);
+            padding: 10px;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+        }
+
+        .search-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-box input:focus {
+            outline: none;
+        }
+
+        .search-btn {
+            background: var(--gold);
+            color: black;
+            border: none;
+            padding: 0 30px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* Results Display */
+        .results-window {
+            width: 100%;
+            border: 1px solid #222;
+            background: #080808;
+            padding: 40px;
+            display: none; /* Hidden until search */
+            text-align: left;
+        }
+
+        .verified-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            padding: 5px 15px;
+            color: var(--gold);
+            font-size: 0.7rem;
+            margin-bottom: 20px;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .label { color: #666; text-transform: uppercase; font-size: 0.75rem; }
+        .value { color: white; font-family: 'Cinzel', serif; }
+
+    </style>
+</head>
+<body>
+
+    <div class="search-header">
+        <h1>National Heritage Registry</h1>
+        <p style="font-size: 0.7rem; color: var(--gold); margin-top: 5px;">OFFICIAL VERIFICATION PORTAL</p>
+    </div>
+
+    <div class="search-container">
+        <p style="margin-bottom: 30px; color: #888;">Enter a <strong>Sovereign ID</strong>, <strong>Certificate Number</strong>, or <strong>Business Entity Code</strong> to verify standing within the Pillars of America framework.</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Ex: PHL-7701-SOV">
+            <button class="search-btn">Verify</button>
+        </div>
+
+        <div class="results-window" style="display: block; border-top: 3px solid var(--gold);">
+            <div class="verified-badge">AUTHENTICATED BY TBBLUSA BUREAU</div>
+            <h2 style="font-family: 'Cinzel'; margin: 0 0 20px 0;">Record: PHL-7701-SOV</h2>
+            
+            <div class="data-row">
+                <span class="label">Identity Status</span>
+                <span class="value" style="color: var(--gold);">Pillar / Architect Tier</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Primary Registry Site</span>
+                <span class="value">Philadelphia Alpha Node</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Goodness Code Standing</span>
+                <span class="value">Compliant (Level 3)</span>
+            </div>
+            <div class="data-row">
+                <span class="label">Economic Accreditation</span>
+                <span class="value">Federal Contract Ready (HUD/DOJ)</span>
+            </div>
+            
+            <p style="font-size: 0.6rem; color: #444; margin-top: 30px;">
+                Verification Timestamp: 2026-03-14 09:12:44 UTC. This record is a permanent fixture of the TGSOBAUSA.ORG ledger.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
