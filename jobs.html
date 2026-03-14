@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opportunities | Economic Foundry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        .header-bar { padding: 40px 5%; background: #000; border-bottom: 2px solid var(--gold); display: flex; justify-content: space-between; align-items: center; }
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        
+        .filter-nav { display: flex; gap: 15px; margin-bottom: 40px; }
+        .filter-pill { padding: 8px 20px; border: 1px solid #333; border-radius: 20px; font-size: 0.75rem; cursor: pointer; color: #888; }
+        .filter-pill.active { border-color: var(--gold); color: var(--gold); }
+
+        .job-card { background: var(--slate); border: 1px solid #222; padding: 30px; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 200px; gap: 20px; transition: 0.3s; }
+        .job-card:hover { border-color: var(--gold); background: #161616; }
+        
+        .job-main h3 { font-family: 'Cinzel'; color: white; margin: 0; }
+        .job-meta { font-size: 0.7rem; color: var(--gold); text-transform: uppercase; margin: 5px 0 15px 0; display: flex; gap: 15px; }
+        .job-desc { font-size: 0.85rem; color: #aaa; line-height: 1.5; }
+        
+        .job-action { text-align: right; display: flex; flex-direction: column; justify-content: center; }
+        .pay-range { font-family: 'Cinzel'; font-size: 1.2rem; margin-bottom: 10px; color: white; }
+        .apply-btn { background: var(--gold); color: black; padding: 12px; text-decoration: none; font-weight: bold; font-size: 0.75rem; text-align: center; font-family: 'Cinzel'; }
+        
+        .lock-notice { font-size: 0.6rem; color: #555; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <header class="header-bar">
+        <div>
+            <h1 style="font-family:'Cinzel'; margin:0;">Economic Foundry</h1>
+            <p style="font-size:0.7rem; color:var(--gold);">ACTIVE PROCUREMENT & LABOR PIPELINE</p>
+        </div>
+        <div style="text-align:right;">
+            <span style="font-size:0.7rem; color:#666;">VERIFIED TALENT POOL:</span>
+            <div style="font-family:'Cinzel'; font-size:1.2rem;">3,102 PILLARS</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filter-nav">
+            <div class="filter-pill active">All Contracts</div>
+            <div class="filter-pill">Infrastructure</div>
+            <div class="filter-pill">Logistics</div>
+            <div class="filter-pill">Bureau Admin</div>
+            <div class="filter-pill">Youth Mentorship</div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-main">
+                <h3>Lead Site Supervisor: Pillar House PHL-02</h3>
+                <div class="job-meta">
+                    <span>Node: Philadelphia Alpha</span>
+                    <span>Required: Tier 3 (Architect)</span>
+                </div>
+                <p class="job-desc">Overseeing the structural restoration of the second Philadelphia Node. Must have completed Mind Damage Module 4 and hold a valid Bureau Safety Certification.</p>
+            </div>
+            <div class="job-action">
+                <div class="pay-range">$45.00 - $65.00 / HR</div>
+                <a href="#" class="apply-btn">Submit Capability Statement</a>
+                <div class="lock-notice">Verify Pillar ID to unlock</div>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-main">
+                <h3>Family of Corporations: Logistics Associate</h3>
+                <div class="job-meta">
+                    <span>Node: Minnesota Expansion</span>
+                    <span>Required: Tier 2 (Builder)</span>
+                </div>
+                <p class="job-desc">Facilitating supply chain movements for the Solomon Kin Records distribution wing. Clean "Goodness Code" standing for the last 6 months required.</p>
+            </div>
+            <div class="job-action">
+                <div class="pay-range">$28.00 - $35.00 / HR</div>
+                <a href="#" class="apply-btn">Apply with Sovereign ID</a>
+            </div>
+        </div>
+
+        <div class="job-card" style="border-left: 4px solid var(--gold);">
+            <div class="job-main">
+                <h3>B2B Procurement: IT Security Audit</h3>
+                <div class="job-meta">
+                    <span>Category: Enterprise Only</span>
+                    <span>Required: Gold Seal Business</span>
+                </div>
+                <p class="job-desc">The Bureau is seeking a Sovereign-owned IT firm to audit the Registry's data encryption protocols for 2026 compliance.</p>
+            </div>
+            <div class="job-action">
+                <div class="pay-range">CONTRACT: $12,500.00</div>
+                <a href="#" class="apply-btn" style="background:white; border: 1px solid var(--gold);">Bid on Contract</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
