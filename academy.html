@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign Academy | Mind Damage Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #1a1a1a; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; display: flex; }
+        
+        .sidebar { width: 300px; background: #000; height: 100vh; border-right: 1px solid var(--gold); padding: 40px 20px; position: fixed; }
+        .main-view { margin-left: 340px; padding: 60px 5%; width: 100%; }
+        
+        .course-header { border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 40px; }
+        .module-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        
+        .module-card { background: var(--slate); border: 1px solid #222; padding: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .module-info h3 { font-family: 'Cinzel'; color: var(--gold); margin: 0; }
+        .module-info p { font-size: 0.85rem; color: #888; margin-top: 5px; }
+        
+        .progress-circle { width: 50px; height: 50px; border: 3px solid #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--gold); }
+        .btn-play { background: var(--gold); color: black; padding: 10px 20px; text-decoration: none; font-family: 'Cinzel'; font-weight: bold; font-size: 0.8rem; }
+        .locked { opacity: 0.5; filter: grayscale(1); }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2 style="font-family:'Cinzel'; color:var(--gold);">Academy</h2>
+        <div style="margin-top:40px;">
+            <p style="font-size:0.7rem; color:#666; text-transform:uppercase;">Curriculum Track</p>
+            <nav>
+                <a href="#" style="display:block; color:white; text-decoration:none; margin-bottom:15px;">1. Psychology of Poverty</a>
+                <a href="#" style="display:block; color:#444; text-decoration:none; margin-bottom:15px;">2. Logic of the Village</a>
+                <a href="#" style="display:block; color:#444; text-decoration:none; margin-bottom:15px;">3. Economic Foundry Prep</a>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="main-view">
+        <div class="course-header">
+            <h1 style="font-family:'Cinzel';">Course: Mind Damage Restoration</h1>
+            <p style="color:var(--gold)">Level: Tier 2 (Builder) Certification</p>
+        </div>
+
+        <div class="module-grid">
+            <div class="module-card">
+                <div class="module-info">
+                    <h3>Module 1: Identifying the Scar</h3>
+                    <p>Unpacking the psychological impact of institutionalization and generational trauma.</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <div class="progress-circle">100%</div>
+                    <a href="#" class="btn-play">Review</a>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div class="module-info">
+                    <h3>Module 2: Sovereignty of Thought</h3>
+                    <p>Techniques for independent decision-making and breaking the "employee-only" mindset.</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <div class="progress-circle" style="border-color:var(--gold)">40%</div>
+                    <a href="#" class="btn-play">Resume</a>
+                </div>
+            </div>
+
+            <div class="module-card locked">
+                <div class="module-info">
+                    <h3>Module 3: Foundational Governance</h3>
+                    <p>Understanding the bylaws of the Family of Corporations and the Great Seal.</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <span style="font-size:0.7rem;">🔒 LOCK TIER 3</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
