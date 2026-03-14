@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace | Sovereign-Village-OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --gold: #c5a059;
+            --slate: #1a1a1a;
+            --border: #333;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .market-header {
+            padding: 40px 5%;
+            border-bottom: 1px solid var(--gold);
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .market-header h1 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .category-bar {
+            background: var(--slate);
+            padding: 10px 5%;
+            display: flex;
+            gap: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-item { color: #888; cursor: pointer; transition: 0.3s; }
+        .category-item:hover, .category-item.active { color: var(--gold); }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Procurement Grid */
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .vendor-card {
+            background: #0d0d0d;
+            border: 1px solid var(--border);
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .vendor-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .vendor-logo {
+            width: 100%;
+            height: 150px;
+            background: #222;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel';
+            color: #444;
+        }
+
+        .verified-badge {
+            font-size: 0.6rem;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 2px 6px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .vendor-title {
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .procurement-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.75rem;
+            margin-top: 15px;
+        }
+
+        .procurement-btn:hover {
+            background: var(--gold);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="market-header">
+        <h1>Sovereign Procurement Portal</h1>
+        <div style="font-size: 0.7rem; color: #666;">BUREAU OF ECONOMIC FOUNDRY // CONTRACTS ACTIVE</div>
+    </header>
+
+    <div class="category-bar">
+        <div class="category-item active">Infrastructure</div>
+        <div class="category-item">Technology</div>
+        <div class="category-item">Logistics</div>
+        <div class="category-item">Legal & Compliance</div>
+        <div class="category-item">Youth Development</div>
+    </div>
+
+    <main class="container">
+        <h2 style="font-family: 'Cinzel'; margin-bottom: 30px;">Active Village Vendors</h2>
+        
+        <div class="listing-grid">
+            <div class="vendor-card">
+                <div class="verified-badge">GSO-ACCREDITED</div>
+                <div class="vendor-logo" style="background: linear-gradient(45deg, #111, #222); border: 1px solid #333;">
+                    [SKR_LOGISTICS]
+                </div>
+                <div class="vendor-title">Solomon Kin Logistics</div>
+                <p style="font-size: 0.8rem; color: #777;">Specializing in Last-Mile delivery and Village supply chain management.</p>
+                <a href="#" class="procurement-btn">Request Quote</a>
+            </div>
+
+            <div class="vendor-card">
+                <div class="verified-badge">TIER 4 CONTRACTOR</div>
+                <div class="vendor-logo" style="background: linear-gradient(45deg, #111, #222); border: 1px solid #333;">
+                    [PILLAR_CONSTRUCTION]
+                </div>
+                <div class="vendor-title">Pillar Housing Dev.</div>
+                <p style="font-size: 0.8rem; color: #777;">Government-ready construction firm for Pillar House retrofitting.</p>
+                <a href="#" class="procurement-btn">View Capability Statement</a>
+            </div>
+
+            <div class="vendor-card">
+                <div class="verified-badge">MINNESOTA NODE</div>
+                <div class="vendor-logo" style="background: linear-gradient(45deg, #111, #222); border: 1px solid #333;">
+                    [UNITY_TECH]
+                </div>
+                <div class="vendor-title">Unity Tech Systems</div>
+                <p style="font-size: 0.8rem; color: #777;">Managed IT and Cybersecurity for the Sovereign-Village-OS network.</p>
+                <a href="#" class="procurement-btn">Acquire License</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
