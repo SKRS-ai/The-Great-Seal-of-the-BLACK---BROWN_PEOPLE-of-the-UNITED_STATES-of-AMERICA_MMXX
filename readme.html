@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Sovereign-Village-OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #0d1117; /* GitHub Dark Theme blue-black */
+            --gold: #c5a059;
+            --code-bg: #161b22;
+            --text-gray: #8b949e;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: #c9d1d9;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Documentation Sidebar */
+        .doc-nav {
+            width: 300px;
+            height: 100vh;
+            border-right: 1px solid #30363d;
+            padding: 40px 25px;
+            position: fixed;
+            background: #0d1117;
+        }
+
+        .doc-nav h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .doc-link {
+            display: block;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            transition: 0.2s;
+        }
+
+        .doc-link:hover { color: white; }
+        .doc-link.active { color: var(--gold); border-left: 2px solid var(--gold); padding-left: 10px; }
+
+        /* Main Content area */
+        .main-doc {
+            margin-left: 300px;
+            padding: 60px 8%;
+            max-width: 900px;
+        }
+
+        .repo-header {
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ff7b72;
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #d1d5da;
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #238636;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <aside class="doc-nav">
+        <h2>TGSOBA Repository</h2>
+        <a href="#" class="doc-link active">1. Overview</a>
+        <a href="#" class="doc-link">2. Identity Protocol (IDP)</a>
+        <a href="#" class="doc-link">3. Ledger Consensus</a>
+        <a href="#" class="doc-link">4. Sovereign-Village-OS API</a>
+        <a href="#" class="doc-link">5. Security Standards</a>
+        <a href="#" class="doc-link">6. Licensing (SKR-2026)</a>
+    </aside>
+
+    <main class="main-doc">
+        <div class="repo-header">
+            <span class="badge">v1.0.4-Stable</span>
+            <h1 style="color:white; margin:0;">Sovereign-Village-OS Whitepaper</h1>
+            <p style="color: var(--text-gray);">Official Documentation for the National Heritage Registry & Bureau of Identity Architecture.</p>
+        </div>
+
+        <section>
+            <h3>Project Scope</h3>
+            <p>The <strong>Sovereign-Village-OS</strong> is an open-source framework designed to decentralize community governance while centralizing cultural identity. It utilizes a <code>Proof-of-Contribution</code> (Goodness Code) to validate access to the <strong>Sovereign Vault</strong>.</p>
+        </section>
+
+        <section>
+            <h3>Technical Architecture</h3>
+            <p>All identity tokens (The Identity Coin) are verified against the Master Registry held by the <strong>Bureau of National Identity</strong>.</p>
+            
+            <div class="code-block">
+// Initialization of Pillar Status
+function initializePillar(identityID) {
+    const registry = TBBL_Bureau.getRegistry();
+    if (registry.verify(identityID)) {
+        return {
+            status: "Sovereign_Authenticated",
+            access: "Tier_03_Foundry",
+            credits: registry.fetchGoodnessCredits(identityID)
+        };
+    }
+}
+            </div>
+        </section>
+
+        <section>
+            <h3>Compliance & Federal Auditing</h3>
+            <p>Our data structure follows the <strong>NIST Security Framework</strong> to ensure that all ancestral records and justice-involved data are encrypted at the highest level. We provide <code>READ-ONLY</code> access to DOJ auditors for recidivism tracking via our <strong>Transparency Protocol</strong>.</p>
+        </section>
+
+        <footer style="margin-top: 100px; padding-top: 20px; border-top: 1px solid #30363d; font-size: 0.75rem; color: var(--text-gray);">
+            Repository maintained by: Solomon Kin Records & TBBLUSA Dev Team.<br>
+            Protected under SKR-Sovereign-License 2026.
+        </footer>
+    </main>
+
+</body>
+</html>
