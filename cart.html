@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Vault Cart | TGSOBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; --slate: #111; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        .cart-wrapper { max-width: 1000px; margin: 80px auto; padding: 20px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 25px; border-bottom: 1px solid #222; background: var(--slate); margin-bottom: 10px; }
+        .item-info h3 { font-family: 'Cinzel'; color: var(--gold); margin: 0; font-size: 1.1rem; }
+        .item-info p { color: #666; font-size: 0.8rem; margin: 5px 0; }
+        .price { font-family: 'Cinzel'; color: var(--gold); font-weight: bold; }
+        .cart-summary { margin-top: 40px; padding: 30px; border: 1px solid var(--gold); text-align: right; }
+        .total-row { font-size: 1.4rem; font-family: 'Cinzel'; margin-bottom: 20px; }
+        .btn-checkout { background: var(--gold); color: black; border: none; padding: 15px 40px; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="cart-wrapper">
+        <h1 style="font-family:'Cinzel'; color:var(--gold);">Foundry Cart</h1>
+        
+        <div class="cart-item">
+            <div class="item-info">
+                <h3>Physical Pillar ID Card</h3>
+                <p>NFC-Enabled PVC • Tier 2 Status</p>
+            </div>
+            <div class="price">$45.00</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-info">
+                <h3>Architect Subscription</h3>
+                <p>Monthly Foundry Access • Node Entry</p>
+            </div>
+            <div class="price">$49.99/mo</div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="total-row">Total: $94.99</div>
+            <a href="checkout.html" class="btn-checkout">Proceed to Vault Checkout →</a>
+        </div>
+    </div>
+</body>
+</html>
