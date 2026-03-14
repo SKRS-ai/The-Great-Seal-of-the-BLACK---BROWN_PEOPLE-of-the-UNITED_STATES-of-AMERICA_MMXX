@@ -3,206 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TGSOBAUSA | Bureau of National Identity</title>
+    <title>TGSOBA USA | The Bureau of National Identity</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --obsidian: #0a0a0a;
             --gold: #c5a059;
-            --gold-muted: #8e7341;
-            --marble: #e0e0e0;
+            --gold-glow: rgba(197, 160, 89, 0.4);
+            --obsidian: #050505;
             --slate: #1a1a1a;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        body, html {
+        * { box-sizing: border-box; }
+
+        body {
             margin: 0;
             padding: 0;
             background-color: var(--obsidian);
-            color: var(--marble);
+            color: #fff;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .monumental-text {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        /* Video/Static Background Overlay */
+        .hero-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+            z-index: -1;
         }
 
-        /* Hero Section - The Monument */
-        .hero {
-            height: 100vh;
+        /* Top Sovereign Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.9);
+            border-bottom: 1px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Main Monument Section */
+        .monument-container {
+            height: 90vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-            border-bottom: 1px solid var(--gold-muted);
+            padding: 0 20px;
         }
 
-        .seal-container {
-            width: 350px;
-            height: 350px;
-            margin-bottom: 2rem;
+        .seal-wrapper {
             position: relative;
-            filter: drop-shadow(0 0 30px rgba(197, 160, 89, 0.2));
-            transition: transform 0.5s ease;
+            width: 320px;
+            height: 320px;
+            margin-bottom: 40px;
+            animation: pulse-glow 4s infinite alternate;
         }
 
-        .seal-container:hover {
-            transform: scale(1.05);
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px var(--gold-glow); }
+            to { box-shadow: 0 0 60px var(--gold-glow); }
         }
 
-        /* This is where your 3D Coin Asset would be rendered */
-        .seal-placeholder {
+        .main-seal {
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            border: 4px solid var(--gold);
+            /* Standardized filename - Make sure Tgsobabpousa1.png is in the same folder */
             background: url('Tgsobabpousa1.png') no-repeat center center;
             background-size: cover;
-            border: 4px solid var(--gold);
+            position: relative;
+            z-index: 2;
         }
 
-        .bureau-header {
-            font-size: 0.9rem;
-            color: var(--gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .main-title {
-            font-size: 2.5rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Sovereign Portal Links */
-        .portal-links {
-            margin-top: 3rem;
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            border: 1px solid var(--gold);
-            background: transparent;
-            color: var(--gold);
-            text-decoration: none;
+        h1 {
             font-family: 'Cinzel', serif;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 8px;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.8);
         }
 
-        .btn:hover {
-            background: var(--gold);
-            color: var(--obsidian);
-            box-shadow: 0 0 15px var(--gold-muted);
+        .sub-headline {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            font-size: 1.2rem;
         }
 
-        /* Pillars Section */
-        .pillars-section {
-            padding: 100px 5%;
+        /* Action Line Grid */
+        .action-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 1px;
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            width: 100%;
+            margin-top: 80px;
         }
 
-        .pillar-card {
-            background: var(--slate);
+        .action-item {
+            background: var(--obsidian);
             padding: 40px;
-            border-top: 3px solid var(--gold);
-            text-align: center;
-            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .pillar-card:hover {
-            background: #222;
+        .action-item:hover {
+            background: var(--slate);
+            padding-top: 30px;
+            padding-bottom: 50px;
         }
 
-        .pillar-card h3 {
+        .action-item h3 {
+            font-family: 'Cinzel', serif;
+            margin: 0;
             color: var(--gold);
-            margin-bottom: 1rem;
         }
 
-        /* Footer / Legal Statement */
+        .action-item p {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 15px;
+        }
+
         footer {
-            background: #000;
-            padding: 60px 10%;
-            font-size: 0.75rem;
-            border-top: 1px solid #333;
-            color: #666;
-            line-height: 1.6;
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: #444;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
         }
 
-        .legal-box {
-            border: 1px solid #333;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .status-indicator {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #00ff00;
-            border-radius: 50%;
-            margin-right: 8px;
-            box-shadow: 0 0 5px #00ff00;
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .seal-wrapper { width: 220px; height: 220px; }
+            .nav-links { display: none; } /* Add a hamburger menu here in future updates */
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="bureau-header">Bureau of National Identity // Official Repository</div>
-        <div class="seal-container">
-            <div class="seal-placeholder"></div>
-        </div>
-        <h1 class="main-title">The Great Seal of Black America</h1>
-        <p class="monumental-text" style="font-size: 1rem; color: #888; margin-top: 10px;">The Pillars of America | Sovereign-Village-OS</p>
-        
-        <div class="portal-links">
-            <a href="#vault" class="btn">Access Sovereign Vault</a>
-            <a href="#registry" class="btn">Registry Verification</a>
-        </div>
-    </section>
+    <div class="hero-bg"></div>
 
-    <section class="pillars-section">
-        <div class="pillar-card">
-            <h3>Justice</h3>
-            <p>The Goodness Code: Replacing recidivism with verified community restoration.</p>
+    <nav>
+        <a href="index.html" class="nav-brand">TGSOBA // BUREAU</a>
+        <div class="nav-links">
+            <a href="registry.html">Vault</a>
+            <a href="network.html">Network</a>
+            <a href="press.html">Media</a>
+            <a href="login.html" style="border: 1px solid var(--gold); padding: 8px 15px;">Sovereign Login</a>
         </div>
-        <div class="pillar-card">
-            <h3>Economy</h3>
-            <p>The Economic Foundry: Federal contract readiness and community sovereignty.</p>
+    </nav>
+
+    <div class="monument-container">
+        <div class="seal-wrapper">
+            <div class="main-seal"></div>
         </div>
-        <div class="pillar-card">
-            <h3>Youth</h3>
-            <p>Pillar Clubs: Positive identity architecture for the next generation.</p>
+        
+        <h1>THE GREAT SEAL</h1>
+        <div class="sub-headline">OF BLACK AND BROWN PEOPLE OF THE USA</div>
+        
+        <p style="max-width: 600px; color: #aaa; margin-top: 30px; line-height: 1.8;">
+            A documented identity framework for the restoration of community, justice, and economic sovereignty. 
+            Establishing the Pillars of America from Philadelphia to Minnesota.
+        </p>
+
+        <div style="margin-top: 40px;">
+            <a href="registry.html" style="background: var(--gold); color: black; padding: 15px 40px; text-decoration: none; font-weight: bold; font-family: 'Cinzel'; margin-right: 20px;">Initialize Identity</a>
+            <a href="search.html" style="border: 1px solid #fff; color: white; padding: 15px 40px; text-decoration: none; font-weight: bold; font-family: 'Cinzel';">Verify Record</a>
         </div>
-        <div class="pillar-card">
+    </div>
+
+    <div class="action-grid">
+        <a href="justice.html" class="action-item">
+            <h3>Justice Branch</h3>
+            <p>The Goodness Code & Mind Damage Restoration Protocols.</p>
+        </a>
+        <a href="foundry.html" class="action-item">
+            <h3>Economic Foundry</h3>
+            <p>Federal Contract Bidding & Sovereign Asset Management.</p>
+        </a>
+        <a href="youth.html" class="action-item">
+            <h3>Pillar Clubs</h3>
+            <p>Youth Diversification, Unity Leagues, & Heritage Education.</p>
+        </a>
+        <a href="infrastructure.html" class="action-item">
             <h3>Infrastructure</h3>
-            <p>Pillar Houses: Building physical monuments of stability and technology.</p>
-        </div>
-    </section>
+            <p>Pillar House Acquisition & Physical Village Blueprints.</p>
+        </a>
+    </div>
 
     <footer>
-        <div style="text-align: center; margin-bottom: 30px;">
-            <span class="status-indicator"></span> SYSTEM STATUS: SECURE | ENCRYPTION: ACTIVE | REGISTRY: 2026.1
-        </div>
-        
-        <div class="legal-box">
-            <p><strong>OFFICIAL NOTICE:</strong> The Great Seal of Black and Brown People of the United States and the Pillars of America framework are the exclusive property of Solomon Kin Records and TBBLUSA. Copyright © 2026. Unauthorized use of these monumental symbols is strictly prohibited under Federal Law.</p>
-            <p>TGSOBAUSA.ORG operates as a Solution-Based Organization in alignment with DOJ, HUD, and MBDA initiatives.</p>
-        </div>
-        
-        <p style="text-align: center; margin-top: 40px;">
-            Established in Philadelphia. Fortified in Minnesota. Bound by the Goodness Code.
-        </p>
+        <p>© 2026 SOLOMON KIN RECORDS | BUREAU OF NATIONAL IDENTITY | ALL RIGHTS RESERVED</p>
+        <p style="margin-top: 10px;"><a href="readme.html" style="color: #444; text-decoration: none;">SYSTEM DOCUMENTATION (GITHUB)</a></p>
     </footer>
 
 </body>
