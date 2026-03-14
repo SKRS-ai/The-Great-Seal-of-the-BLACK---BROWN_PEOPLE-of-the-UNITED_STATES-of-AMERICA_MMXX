@@ -2,20 +2,198 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Sovereign Vault | REPAIR MODE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry Vault | TGSOBA Bureau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background: #050505; color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; border: 1px solid #c5a059; padding: 40px; text-align: center; }
-        h1 { font-family: 'Cinzel'; color: #c5a059; }
-        .nav-link { color: #c5a059; text-decoration: none; font-size: 0.8rem; border: 1px solid #c5a059; padding: 10px; margin-top: 20px; display: inline-block; }
+        :root { 
+            --gold: #c5a059; 
+            --obsidian: #050505; 
+            --slate: #0d0d0d; 
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body { 
+            background-color: var(--obsidian); 
+            color: #e0e0e0; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        /* Ambient Background Effect to prevent White Screen */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+            z-index: -1;
+        }
+
+        /* Top Security Bar */
+        .security-bar {
+            background: #000;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Cinzel';
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .status-light {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Vault Content */
+        .vault-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .vault-header h1 {
+            font-family: 'Cinzel';
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .vault-header p {
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            font-size: 0.75rem;
+        }
+
+        /* The Archive Grid */
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .archive-card {
+            background: var(--slate);
+            border: 1px solid #222;
+            padding: 45px 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .archive-card::after {
+            content: "TOP SECRET";
+            position: absolute;
+            top: 10px;
+            right: -25px;
+            background: #222;
+            color: #444;
+            font-size: 0.5rem;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+        }
+
+        .archive-card:hover {
+            border-color: var(--gold);
+            background: #111;
+            transform: translateY(-5px);
+        }
+
+        .archive-card h3 {
+            font-family: 'Cinzel';
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        .archive-card p {
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .btn-entry {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel';
+            font-size: 0.75rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-entry:hover {
+            background: var(--gold);
+            color: black;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            font-size: 0.65rem;
+            color: #333;
+            text-align: center;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Sovereign Vault: Active</h1>
-        <p>If you can see this, the white screen error is resolved.</p>
-        <a href="index.html" class="nav-link">Return to Monument</a>
+
+    <div class="security-bar">
+        <div><span class="status-light"></span> SYSTEM ENCRYPTED // NODE: PHL-01</div>
+        <div><a href="index.html" style="color:var(--gold); text-decoration:none;">LOGOUT / EXIT</a></div>
     </div>
+
+    <div class="vault-container">
+        <header class="vault-header">
+            <h1>The Sovereign Vault</h1>
+            <p>Central Registry for the Black & Brown People of the USA</p>
+        </header>
+
+        <div class="archive-grid">
+            <div class="archive-card">
+                <h3>Identity Enhancement</h3>
+                <p>The core registry of your individuality. Verify your status and generate your Sovereign ID credentials.</p>
+                <a href="verify-individual.html" class="btn-entry">Authenticate Identity</a>
+            </div>
+
+            <div class="archive-card">
+                <h3>Ancestral Records</h3>
+                <p>Access the Great Seal’s genealogy archives. Document your lineage and recover ancestral clarity.</p>
+                <a href="search.html" class="btn-entry">Search Archives</a>
+            </div>
+
+            <div class="archive-card">
+                <h3>Asset Ledger</h3>
+                <p>Manage business certifications, land trusts, and Identity Coin balances within the Village OS.</p>
+                <a href="products.html" class="btn-entry">Open Ledger</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        OFFICIAL PROPERTY OF THE BUREAU OF NATIONAL IDENTITY & SOLOMON KIN RECORDS © 2026
+    </footer>
+
 </body>
 </html>
