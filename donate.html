@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Support the Pillars | TBBLUSA</title>
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; text-align: center; }
+        .donate-box { max-width: 500px; margin: 100px auto; border: 2px solid var(--gold); padding: 50px; }
+        .amount-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 30px 0; }
+        .amt-btn { padding: 15px; border: 1px solid var(--gold); background: transparent; color: var(--gold); cursor: pointer; }
+        .amt-btn:hover { background: var(--gold); color: black; }
+    </style>
+</head>
+<body>
+    <div class="donate-box">
+        <h1 style="font-family:'Cinzel'">Support the Restoration</h1>
+        <p>Your contributions fund the Pillar Houses and the Mind Damage curriculum for returning citizens.</p>
+        
+        <div class="amount-grid">
+            <button class="amt-btn">$25</button>
+            <button class="amt-btn">$100</button>
+            <button class="amt-btn">$500</button>
+        </div>
+        
+        <input type="number" placeholder="Other Amount ($)" style="width:100%; padding:15px; background:black; border:1px solid #333; color:white; margin-bottom:20px;">
+        <button style="width:100%; padding:20px; background:var(--gold); color:black; font-weight:bold; border:none; cursor:pointer;">Complete Donation</button>
+    </div>
+</body>
+</html>
