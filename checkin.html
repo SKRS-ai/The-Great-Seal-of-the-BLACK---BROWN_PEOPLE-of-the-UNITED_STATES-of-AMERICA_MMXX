@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Check-In | TGSOBA</title>
+    <style>
+        :root { --gold: #c5a059; --obsidian: #050505; }
+        body { background: var(--obsidian); color: white; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .kiosk-mode { width: 500px; text-align: center; border: 2px solid var(--gold); padding: 60px; background: #000; }
+        .scan-area { width: 200px; height: 200px; border: 1px dashed var(--gold); margin: 40px auto; display: flex; align-items: center; justify-content: center; position: relative; }
+        .scan-line { width: 100%; height: 2px; background: var(--gold); position: absolute; top: 0; animation: scan 2s infinite linear; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+        .input-alt { background: transparent; border: none; border-bottom: 1px solid #333; color: white; width: 80%; padding: 10px; text-align: center; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="kiosk-mode">
+        <h1 style="font-family:'Cinzel'; color:var(--gold);">Pillar House PHL-01</h1>
+        <p>Philadelphia Alpha Node Check-In</p>
+        
+        <div class="scan-area">
+            <div class="scan-line"></div>
+            <span style="font-size:0.6rem; color:#444;">SCAN MOBILE ID QR</span>
+        </div>
+
+        <p style="margin: 20px 0; color:#666;">— OR ENTER ID NUMBER —</p>
+        <input type="text" class="input-alt" placeholder="PHL-XXXX-SOV">
+        
+        <button style="margin-top:40px; width:100%; padding:20px; background:var(--gold); color:black; font-family:'Cinzel'; font-weight:bold; border:none; cursor:pointer;">Authenticate Presence</button>
+    </div>
+
+</body>
+</html>
